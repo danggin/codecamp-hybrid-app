@@ -2,26 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+html {
+  /* 피그마 기본 가로를 360으로 가정했을 때
+  가로너비 360 : HTMl기본폰트 16px = 내 기계 사이즈 100vw : 조정폰트 x
+  이 식을 풀면 x = (40 / 9)  */
+  font-size: calc((40 / 9) * 1vw);
 }
