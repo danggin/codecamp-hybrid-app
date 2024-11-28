@@ -8,7 +8,9 @@ import WebviewInternetFailPage from "@/components/section01/01-05-webview-intern
 // [ section02 ]
 import RatioScalingPage from "@/components/section02/02-01-ratio-scaling";
 import LayoutHeaderGlobalPage from "@/components/section02/02-02-layout-header-global";
+import LayoutHeaderTransparentPage from "@/components/section02/02-04-layout-header-transparent";
+import LayoutFooterShortAndLong from "@/components/section02/02-05-layout-footer-short-and-long";
 
 export default function StartPage() {
-  return <LayoutHeaderGlobalPage />;
+  return <LayoutFooterShortAndLong />;
 }

@@ -1,5 +1,8 @@
 import "./globals.css";
 import Layout from "@/commons/layout/02-02-layout-header-global";
+import LayoutGlobalAndLocal from "@/commons/layout/02-03-layout-header-local";
+import LayoutGlobalAndLocalTransparent from "@/commons/layout/02-04-layout-header-local-transparent";
+import LayoutShortAndLong from "@/commons/layout/02-05-layout-footer-short-and-long";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -15,8 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        {/* 02-02-layout-header-global */}
-        <Layout>{children}</Layout>
+        <LayoutShortAndLong>{children}</LayoutShortAndLong>
       </body>
     </html>
   );
