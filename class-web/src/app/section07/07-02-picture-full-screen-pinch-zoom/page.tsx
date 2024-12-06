@@ -11,9 +11,16 @@ export default function PictureFullScreenPage() {
   const onClickFullScreen = async () => {
     setIsLoading(true);
 
-    window.setTimeout(async () => {
+    window.setTimeout(() => {
       setIsFullScreen(true);
-      await fetchApp({ query: "toggleDeviceLayoutForNotchTranslucentSet" });
+      fetchApp({ query: "toggleDeviceLayoutForNotchTranslucentSet" });
+      fetchApp({ query: "toggleDeviceLayoutForPinchZoomSet" });
+      document
+        .querySelector("meta[name='viewport']")
+        ?.setAttribute(
+          "content",
+          "width=device-width, initail-scale=1.0, minimun-scale=1.0, maximum-scale=3.0, user-scalable=yes"
+        );
 
       window.setTimeout(() => {
         setIsLoading(false);
@@ -22,8 +29,23 @@ export default function PictureFullScreenPage() {
   };
 
   const onClickClose = async () => {
-    setIsFullScreen(false);
-    await fetchApp({ query: "toggleDeviceLayoutForNotchTranslucentSet" });
+    setIsLoading(true);
+
+    window.setTimeout(() => {
+      setIsFullScreen(false);
+      fetchApp({ query: "toggleDeviceLayoutForNotchTranslucentSet" });
+      fetchApp({ query: "toggleDeviceLayoutForPinchZoomSet" });
+      document
+        .querySelector("meta[name='viewport']")
+        ?.setAttribute(
+          "content",
+          "width=device-width, initail-scale=1.0, minimun-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        );
+
+      window.setTimeout(() => {
+        setIsLoading(false);
+      }, 100);
+    }, 100);
   };
 
   if (isLoading) return <></>;

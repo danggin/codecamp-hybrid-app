@@ -24,9 +24,18 @@ import PostMessageDeviceApiPromiseRefactoringPage from "@/components/section03/0
 import DeviceSystemApiPage from "@/components/section04/04-01-device-system-api";
 import DeviceLocationApiPage from "@/components/section04/04-02-device-location-api";
 import DeviceApiRefactoringPage from "@/components/section04/04-03-device-api-refactoring";
+
+// [ Section05 ]
 import ScheduleNotificationsPage from "@/components/section05/05-01-schedule-notifications";
 import ScheduleNotificationsClickPage from "@/components/section05/05-02-schedule-notifications-click";
 
+// [ Section06 ]
+import OpenSettingsPage from "@/components/section06/06-01-open-settings";
+
+// [ Section07 ]
+import PictureFullScreenPage from "@/components/section07/07-01-picture-full-screen/02-after-index";
+import PictureFullScreenPinchZoomPage from "@/components/section07/07-02-picture-full-screen-pinch-zoom";
+
 export default function Home() {
-  return <ScheduleNotificationsClickPage />;
+  return <PictureFullScreenPinchZoomPage />;
 }
