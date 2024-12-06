@@ -36,6 +36,10 @@ import OpenSettingsPage from "@/components/section06/06-01-open-settings";
 import PictureFullScreenPage from "@/components/section07/07-01-picture-full-screen/02-after-index";
 import PictureFullScreenPinchZoomPage from "@/components/section07/07-02-picture-full-screen-pinch-zoom";
 
+// [ Section08 ]
+import AndroidBackPage from "@/components/section08/08-01-android-back";
+import AndroidBackAndExitPage from "@/components/section08/08-04-android-back-and-exit";
+
 export default function Home() {
-  return <PictureFullScreenPinchZoomPage />;
+  return <AndroidBackAndExitPage />;
 }
