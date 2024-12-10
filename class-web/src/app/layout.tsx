@@ -8,6 +8,8 @@ import DeviceSettingVariables from "@/commons/settings/05-01-device-setting-vari
 import DeviceSettingRedirect from "@/commons/settings/05-02-device-setting-redirect";
 import DeviceSettingBack from "@/commons/settings/08-01-device-setting-back";
 import DeviceSettingBackAndExit from "@/commons/settings/08-04-device-setting-back-and-exit";
+import DeviceSettingViewTransition from "@/commons/settings/09-01-device-setting-view-transition";
+import RoutingSettingViewTransition from "@/commons/settings/09-01-routing-setting-view-transition";
 import type { Metadata, Viewport } from "next";
 
 export const metadata: Metadata = {
@@ -31,7 +33,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <DeviceSettingBackAndExit>{children}</DeviceSettingBackAndExit>
+        <DeviceSettingViewTransition>
+          <RoutingSettingViewTransition>
+            {children}
+          </RoutingSettingViewTransition>
+        </DeviceSettingViewTransition>
       </body>
     </html>
   );

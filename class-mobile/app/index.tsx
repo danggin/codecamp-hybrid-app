@@ -39,7 +39,8 @@ import PictureFullScreenPinchZoomPage from "@/components/section07/07-02-picture
 // [ Section08 ]
 import AndroidBackPage from "@/components/section08/08-01-android-back";
 import AndroidBackAndExitPage from "@/components/section08/08-04-android-back-and-exit";
+import ViewTransitionPage from "@/components/section09/09-01-view-transition";
 
 export default function Home() {
-  return <AndroidBackAndExitPage />;
+  return <ViewTransitionPage />;
 }
